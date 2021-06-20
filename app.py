@@ -2,11 +2,11 @@
 
 
 from flask import Flask, render_template, request
-#import jsonify
-#import requests
+import jsonify
+import requests
 import joblib
 import numpy as np
-#import sklearn
+import sklearn
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
