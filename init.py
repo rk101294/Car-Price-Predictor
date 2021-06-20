@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request
 #import jsonify
-import requests
+#import requests
 import joblib
 import numpy as np
 import sklearn
