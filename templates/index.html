@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Car Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+   
+
+  
+  <style>
+  .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+</style>
+
+
+
+<style>
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF0000;
+}
+
+h3 {
+  background-color: silver;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF0000;
+}
+</style>
+
+<style>
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #2f2f2f;
+  color: white;
+  font-size: 30px;
+}
+</style>
+
+<style>
+.bg-4 {
+  background-color: #2f2f2f;
+  color: #ffffff;
+}
+</style>
+
+ 
+</head>
+<body>
+
+<div style="background-image: url('21.jpg');   
+  background-repeat: no-repeat;
+  background-size: 1350px 900px;">
+
+<div class="bg-1">
+  <div class="container text-center">
+  
+  <div class="header">
+  <h1>CAR PRICE PREDICTOR</h1>
+ 
+</div>
+  
+    
+    
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+           
+            <h3>Year</h3>
+            <input id="first" name="Year" type="number ">
+            <h3>What is the Showroom Price?(In lakhs)</h3>
+            <br><input id="second" name="Present_Price" required="required">
+            <h3>How Many Kilometers Drived?</h3>
+            <input id="third" name="Kms_Driven" required="required">
+            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3>
+            <br><input id="fourth" name="Owner" required="required">
+            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select>
+            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Made By: Rohit Kushwaha </p>
+</footer>
+
+</body>
+</html>
